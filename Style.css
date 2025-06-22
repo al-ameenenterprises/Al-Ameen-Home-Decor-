@@ -1,200 +1,89 @@
-/* Basic Reset and Global Styles */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Inter', sans-serif; /* Using Inter for a modern, premium feel */
-    background-color: #C19A6B; /* Camel Brown */
-    margin: 0;
-    padding: 0;
-    color: #f0f0f0; /* Light text for readability on dark backgrounds */
-    line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+  background-color: #D2B48C; /* Sand Brown */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4B2E2E; /* Dark Brown Font */
+  line-height: 1.6;
 }
 
-/* Header Styling */
+/* Header */
 header {
-    background-color: #C19A6B; /* Match header background with body for continuity */
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for premium feel */
-}
-
-.logo-container {
-    display: inline-block;
-    padding: 10px;
-    background-color: #654321; /* Dark brown background for the logo itself */
-    border-radius: 10px; /* Rounded corners for the logo container */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for logo emphasis */
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
 .logo {
-    max-width: 250px; /* Adjust logo size */
-    height: auto;
-    display: block; /* Remove extra space below image */
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
-/* Main Content Container */
-.container {
-    max-width: 1200px;
-    margin: 30px auto; /* More margin for breathing room */
-    padding: 20px;
+.welcome-text {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Product Section Styling */
-.product-section {
-    background-color: #654321; /* Dark Brown for layout sections */
-    padding: 40px 20px; /* More padding for a premium look */
-    margin-bottom: 30px;
-    border-radius: 12px; /* More rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow */
-    text-align: center; /* Center section content */
+/* Product Section */
+.product-gallery {
+  padding: 3rem 1rem;
+  background-color: #B8860B33; /* Slight dark brown tint for layout */
+  text-align: center;
 }
 
-.product-section h2 {
-    font-size: 2.5em; /* Larger heading */
-    color: #FFD700; /* Golden color for headings */
-    margin-bottom: 40px; /* More space below heading */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
 }
 
-/* Product Grid Styling */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider cards */
-    gap: 25px; /* More space between cards */
-    padding: 20px 0;
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
-/* Product Card Styling */
 .product-card {
-    background-color: #8B4513; /* Slightly lighter dark brown for product cards */
-    border-radius: 10px; /* Consistent rounded corners */
-    padding: 20px; /* More padding inside cards */
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Shadow for card lift effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    display: flex; /* Use flexbox for internal layout */
-    flex-direction: column;
-    justify-content: space-between; /* Space content evenly */
-    height: 100%; /* Ensure cards are same height in a row */
+  background-color: #FFF8F0;
+  border: 1px solid #4B2E2E55;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 220px;
+  box-shadow: 0 4px 6px rgba(75, 46, 46, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* More prominent shadow on hover */
+  transform: scale(1.05);
 }
 
-.product-image {
-    max-width: 100%;
-    height: 200px; /* Fixed height for consistent image size */
-    object-fit: cover; /* Crop images to fit while maintaining aspect ratio */
-    border-radius: 6px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.product-card img {
+  max-width: 100%;
+  border-radius: 6px;
 }
 
-.product-card h3 {
-    color: #FFD700; /* Golden color for product titles */
-    font-size: 1.4em;
-    margin-top: 0;
-    margin-bottom: 10px;
+.product-card h4 {
+  margin: 0.5rem 0 0.3rem;
+  font-size: 1.1rem;
+  color: #4B2E2E;
 }
 
 .product-card p {
-    color: #d0d0d0;
-    font-size: 0.95em;
-    margin-bottom: 15px;
-    flex-grow: 1; /* Allows description to take up available space */
+  font-size: 0.9rem;
+  color: #3b2a2a;
 }
 
-.product-card .price {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #FFFFFF; /* White for price emphasis */
-    margin-bottom: 10px;
-}
-
-.product-card button {
-    background-color: #D4AF37; /* Golden button */
-    color: #654321; /* Dark brown text on golden button */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.product-card button:hover {
-    background-color: #C0A020; /* Slightly darker gold on hover */
-    transform: scale(1.02);
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
-    background-color: #654321; /* Dark Brown */
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 50px; /* Add some space above the footer */
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center;
+  padding: 1rem;
+  background-color: #A0522D;
+  color: #fff;
+  margin-top: 2rem;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .logo {
-        max-width: 180px; /* Adjust logo size for smaller screens */
-    }
-
-    .product-section h2 {
-        font-size: 2em;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjust card width for smaller screens */
-        gap: 15px;
-    }
-
-    .product-image {
-        height: 180px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        max-width: 150px; /* Further adjust logo size for very small screens */
-    }
-
-    .product-section h2 {
-        font-size: 1.8em;
-        margin-bottom: 30px;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr; /* Single column layout on very small screens */
-        gap: 20px;
-    }
-
-    .product-card {
-        padding: 15px;
-    }
-
-    .product-image {
-        height: 150px;
-    }
-
-    .product-card h3 {
-        font-size: 1.2em;
-    }
-
-    .product-card p {
-        font-size: 0.9em;
-    }
-
-    .product-card button {
-        padding: 8px 15px;
-        font-size: 0.9em;
-    }
-}
-
