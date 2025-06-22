@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset and base styling */
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +8,11 @@
 body {
   background-color: #D2B48C; /* Sand Brown */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #4B2E2E; /* Dark Brown Font */
+  color: #4B2E2E; /* Dark brown font */
   line-height: 1.6;
 }
 
-/* Header */
+/* Header styling */
 header {
   text-align: center;
   padding: 2rem 1rem;
@@ -28,18 +28,20 @@ header {
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto;
+  font-weight: bold;
 }
 
-/* Product Section */
+/* Products section */
 .product-gallery {
   padding: 3rem 1rem;
-  background-color: #B8860B33; /* Slight dark brown tint for layout */
+  background-color: #B8860B33; /* Light brown layout section */
   text-align: center;
 }
 
 .section-title {
   font-size: 1.8rem;
   margin-bottom: 2rem;
+  color: #4B2E2E;
 }
 
 .products {
@@ -79,7 +81,7 @@ header {
   color: #3b2a2a;
 }
 
-/* Footer */
+/* Footer styling */
 footer {
   text-align: center;
   padding: 1rem;
